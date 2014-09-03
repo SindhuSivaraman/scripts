@@ -55,7 +55,7 @@
 		var ctx = target.getContext('2d');
 		console.log("context canv=======" + ctx.fillStyle);	
 		ctx.globalCompositeOperation = "destination-over";
-		ctx.fillStyle="#FFFFFF";
+		//ctx.fillStyle="#FFFFFF";
 		ctx.fillRect(0,0,svgTags.clientWidth * 2,svgTags.clientHeight * 2);
 		console.log("context:::" + ctx + " ::: "+ ctx.fillStyle);
 		}
