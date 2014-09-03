@@ -54,9 +54,9 @@
 		if (target.getContext) {
 		var ctx = target.getContext('2d');
 		console.log("context canv=======" + ctx.fillStyle);	
-		ctx.globalCompositeOperation = "destination-over";
+		//ctx.globalCompositeOperation = "destination-over";
 		//ctx.fillStyle="#FFFFFF";
-		ctx.fillRect(0,0,svgTags.clientWidth * 2,svgTags.clientHeight * 2);
+		//ctx.fillRect(0,0,svgTags.clientWidth * 2,svgTags.clientHeight * 2);
 		console.log("context:::" + ctx + " ::: "+ ctx.fillStyle);
 		}
 		if (typeof(s.documentElement) != 'undefined') {
@@ -833,8 +833,8 @@
 				else if (this.style('fill').hasValue()) {
 					var fillStyle = this.style('fill');
 					if (fillStyle.value == 'currentColor') fillStyle.value = this.style('color').value;
-					//ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(0,0,0,0)' : fillStyle.value);
-					ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(255,255,255,255)' : fillStyle.value);
+					ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(0,0,0,0)' : fillStyle.value);
+					//ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(255,255,255,255)' : fillStyle.value);
 				}
 				if (this.style('fill-opacity').hasValue()) {
 					var fillStyle = new svg.Property('fill', ctx.fillStyle);
