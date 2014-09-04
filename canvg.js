@@ -834,9 +834,10 @@
 				}
 				else if (this.style('fill').hasValue()) {
 					var fillStyle = this.style('fill');
+					console.log('fillStyle.value' + fillStyle.value);
 					if (fillStyle.value == 'currentColor') fillStyle.value = this.style('color').value;
-					//ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(0,0,0,0)' : fillStyle.value);
-					ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(255,255,255,255)' : fillStyle.value);
+					ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(0,0,0,0)' : fillStyle.value);
+					//ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(255,255,255,255)' : fillStyle.value);
 				}
 				if (this.style('fill-opacity').hasValue()) {
 					var fillStyle = new svg.Property('fill', ctx.fillStyle);
