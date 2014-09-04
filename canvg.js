@@ -971,8 +971,8 @@
 			this.baseSetContext = this.setContext;
 			this.setContext = function(ctx) {
 				// initial values and defaults
-				//ctx.strokeStyle = 'rgba(0,0,0,0)';
-				ctx.strokeStyle = 'rgba(255,255,255,255)';
+				ctx.strokeStyle = 'rgba(0,0,0,0)';
+				//ctx.strokeStyle = 'rgba(255,255,255,255)';
 				ctx.lineCap = 'butt';
 				ctx.lineJoin = 'miter';
 				ctx.miterLimit = 4;	
