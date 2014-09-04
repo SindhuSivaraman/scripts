@@ -195,6 +195,7 @@
 					if (opacityProp.value != null && opacityProp.value != '' && typeof(this.value)=='string') { // can only add opacity to colors, not patterns
 						var color = new RGBColor(this.value);
 						if (color.ok) {
+							console.log(color.r + ', ' + color.g + ', ' + color.b);
 							newValue = 'rgba(' + color.r + ', ' + color.g + ', ' + color.b + ', ' + opacityProp.numValue() + ')';
 						}
 					}
@@ -760,6 +761,7 @@
 				// add class styles
 				if (this.attribute('class').hasValue()) {
 					var classes = svg.compressSpaces(this.attribute('class').value).split(' ');
+					console.log('=====classes=========' + classes);
 					for (var j=0; j<classes.length; j++) {
 						styles = svg.Styles['.'+classes[j]];
 						if (styles != null) {
@@ -833,8 +835,8 @@
 				else if (this.style('fill').hasValue()) {
 					var fillStyle = this.style('fill');
 					if (fillStyle.value == 'currentColor') fillStyle.value = this.style('color').value;
-					ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(0,0,0,0)' : fillStyle.value);
-					//ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(255,255,255,255)' : fillStyle.value);
+					//ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(0,0,0,0)' : fillStyle.value);
+					ctx.fillStyle = (fillStyle.value == 'none' ? 'rgba(255,255,255,255)' : fillStyle.value);
 				}
 				if (this.style('fill-opacity').hasValue()) {
 					var fillStyle = new svg.Property('fill', ctx.fillStyle);
