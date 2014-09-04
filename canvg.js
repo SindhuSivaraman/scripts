@@ -57,7 +57,7 @@
 		ctx.globalCompositeOperation = "destination-over";
 		ctx.fillStyle="#FFFFFF";
 		ctx.fillRect(0,0,svgTags.clientWidth * 2,svgTags.clientHeight * 2);
-		console.log("context:::" + ctx + " ::: "+ ctx.fillStyle);
+		console.log("context:::::: "+ ctx.fillStyle);
 		}
 		if (typeof(s.documentElement) != 'undefined') {
 			// load from xml doc
